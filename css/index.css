@@ -36,7 +36,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: var(--bg-BlueDark10); */
-  transition: ease-in-out 0.5s linear;
+  transition: ease-in-out .5s linear;
 }
 header.active {
   background-image: url(/img/modoWhite.jpeg);
@@ -44,6 +44,7 @@ header.active {
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: var(--bg-BlueDark30); */
+  transition: ease-in-out .5s linear;
 }
 
 header > div:first-of-type {
@@ -74,8 +75,7 @@ header > nav > ul {
   align-items: center;
   gap: 26px;
   padding: 16px 0;
-  
-  transition: 1s ease-in-out;
+
 }
 
 header > nav > ul > li > a {
