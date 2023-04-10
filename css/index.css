@@ -31,22 +31,39 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 120px;
-  background-color: var(--bg-BlueDark10);
+  background-image: url(/img/modoDark.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: var(--bg-BlueDark10); */
   transition: ease-in-out 0.5s linear;
 }
 header.active {
-  background-color: var(--bg-BlueDark30);
+  background-image: url(/img/modoWhite.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: var(--bg-BlueDark30); */
 }
 
 header > div:first-of-type {
-  width: 50px;
+  width: 80px;
   aspect-ratio: 1;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--bg-gold20);
+  /* color: var(--bg-gold20); */
   cursor: pointer;
+}
+header > div:first-of-type:hover{
+  scale: 1.1;
+}
+header > div:first-of-type > img{
+  width: 100%;
+  scale: 1.5;
+  transform: translateY(.2rem);
+  object-fit: cover;
 }
 header > nav {
   display: flex;
@@ -112,7 +129,7 @@ header > div:last-of-type {
   header > nav > ul.active{
     width: 25%;
     height: 24rem;
-    top: 4.3em;
+    top: 6.2em;
     left: 0;
     
     position: absolute;
