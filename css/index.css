@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+@import url(main.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+  /* outline: 2px solid red; */
+}
+
+:root {
+  --bg-White: #f5f5f5;
+  --bg-BlueDark10: #000814;
+  --bg-BlueDark20: #001d3d;
+  --bg-BlueDark30: #003566;
+  --bg-gold10: #ffc300;
+  --bg-gold20: #ffd60a;
+}
+
+body {
+  background-color: var(--bg-BlueDark20);
+}
+
+/* header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  background-color: var(--bg-BlueDark10);
+  transition: ease-in-out 0.5s linear;
+}
+header.active {
+  background-color: var(--bg-BlueDark30);
+}
+
+header > div:first-of-type {
+  width: 50px;
+  aspect-ratio: 1;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg-gold20);
+  cursor: pointer;
+}
+header > nav {
+  display: flex;
+  align-items: center;
+}
+header > nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 16px 0;
+  
+  transition: 1s ease-in-out;
+}
+
+header > nav > ul > li > a {
+  position: relative;
+  line-height: 40px;
+  color: var(--bg-White);
+  font-weight: bold;
+}
+header > nav > ul > li > a.active {
+  line-height: 40px;
+  color: var(--bg-gold10);
+  font-weight: bold;
+}
+
+header > nav > ul > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 30px;
+  width: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--bg-gold20);
+  transition: all 200ms ease;
+}
+
+header > nav > ul > li > a:hover::after,
+header > nav > ul > li > a.active:hover::after {
+  width: 100%;
+  left: 0;
+}
+header > nav > ul > li > a.active:hover::after {
+  background-color: var(--bg-White);
+}
+
+header > div:last-of-type {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 40px;
+    justify-content: space-between;
+  }
+  header > div:first-of-type {
+    margin: 10px 0;
+  }
+  header > nav > ul{
+    display: none;
+  }
+  header > nav > ul.active{
+    width: 25%;
+    height: 24rem;
+    top: 4.3em;
+    left: 0;
+    
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    border-bottom-right-radius: 35px;
+    border: none;
+    
+    background-color: var(--bg-White);
+  }
+  header > nav > ul.active.dark{
+    background-color: var(--bg-BlueDark10);
+  }
+  
+  header > div:last-of-type {
+    display: initial;
+  }
+}
+@media screen and (max-width: 425px) {
+  header > nav > ul.active{
+    width: 50%;
+  }
+}

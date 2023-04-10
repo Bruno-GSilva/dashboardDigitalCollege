@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="/css/estilo.css" />
-    <script src="js/index.js" defer></script>
-  </head>
-  <body>
-    <header id="header">
-      <div>logo</div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Dashboard</a></li>
-          <li><a href="/aula10/pages/categoria.html">Categorias</a></li>
-          <li><a href="/aula10/pages/produtos.html">Produtos</a></li>
-          <li><a href="#">Sair</a></li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <script src="js/index.js" defer></script>
+</head>
+
+<body>
+  <header id="header">
+    <div>logo</div>
+    <nav>
+      <ul id="ul" class="dark">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="/aula10/pages/categoria.html">Categorias</a></li>
+        <li><a href="/aula10/pages/produtos.html">Produtos</a></li>
+        <li><a href="#">Sair</a></li>
         <label class="switch">
           <input type="checkbox" />
           <span class="slider" id="darkmode"></span>
         </label>
-      </nav>
-    </header>
-  </body>
+      </ul>
+    </nav>
+    <div>
+      <label class="burger" for="burger" id="burger">
+        <input type="checkbox" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+  </header>
+</body>
 </html>
