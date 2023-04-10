@@ -8,7 +8,6 @@
   list-style: none;
   text-decoration: none;
   font-family: "Noto Sans JP", sans-serif;
-  /* outline: 2px solid red; */
 }
 
 :root {
@@ -35,7 +34,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-color: var(--bg-BlueDark10); */
   transition: ease-in-out .5s linear;
 }
 header.active {
@@ -43,18 +41,15 @@ header.active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-color: var(--bg-BlueDark30); */
   transition: ease-in-out .5s linear;
 }
 
 header > div:first-of-type {
   width: 80px;
   aspect-ratio: 1;
-  /* border: 1px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* color: var(--bg-gold20); */
   cursor: pointer;
 }
 header > div:first-of-type:hover{
@@ -114,11 +109,24 @@ header > nav > ul > li > a.active:hover::after {
 header > div:last-of-type {
   display: none;
 }
-
+@media screen and (min-width: 1024px){
+  header{
+    background-image: none;
+    background-color: var(--bg-BlueDark10);
+  }
+  header.active{
+    background-image: none;
+    background-color: var(--bg-BlueDark30);
+  }
+}
 @media screen and (max-width: 768px) {
   header {
+    background-image: url(/img/modoDark.jpeg);
     padding: 0 40px;
     justify-content: space-between;
+  }
+  header.active{
+    background-image: url(/img/modoWhite.jpeg);
   }
   header > div:first-of-type {
     margin: 10px 0;
