@@ -164,3 +164,54 @@ header > div:last-of-type {
     width: 50%;
   }
 }
+
+/* section */
+
+section{
+  width: 100%;
+  height: 100vh;
+  padding:80px;
+  background-color: var(--bg-BlueDark10);
+}
+
+section > .tabela{
+  background-color: var(--bg-White);
+  padding: 30px;
+  border: 1px solid black;
+  box-shadow: .1rem .1rem .3rem black;
+}
+
+section > div:first-of-type{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+section > div:first-of-type > button{
+  background-color: var(--bg-BlueDark30);
+  padding: 15px;
+  border: none;
+  box-shadow: .1rem .1rem .3rem black;
+  border-radius: .3rem;
+  color: var(--bg-White);
+  font-weight: bold;
+  cursor: pointer;
+}
+section > div:first-of-type > button:hover{
+  scale: 1.1;
+}
+
+#acoes{
+  display: flex;
+  gap: 16px;
+}
+
+#trash, #adicionar{
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+#trash:hover, #adicionar:hover{
+  background-color: var(--bg-BlueDark30);
+}

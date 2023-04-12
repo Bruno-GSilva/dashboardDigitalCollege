@@ -1,12 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Categorias</title>
+        <link rel="stylesheet"
+            href="http://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
+            />
+        <link rel="stylesheet" href="/css/index.css" />
+        <script src="/js/index.js" defer></script>
+    </head>
+
+    <body>
+        <header id="header">
+            <div><img src="/img/logo.png" alt=""></div>
+            <nav>
+                <ul id="ul" class="dark">
+                    <li><a href="/index.html">Dashboard</a></li>
+                    <li><a href="/pages/categoria.html">Categorias</a></li>
+                    <li><a href="/pages/produtos.html">Produtos</a></li>
+                    <li><a href="#">Sair</a></li>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider" id="darkmode"></span>
+                    </label>
+                </ul>
+            </nav>
+            <div>
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </header>
+
+        <section>
+            <div>
+                <h2>Categorias</h2>
+                <button>Nova Categoria</button>
+            </div>
+            <div class="tabela">
+                <table id="myTable" class="display">
+                    <thead>
+                        <tr>
+                            <th>Categorias</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Roupas</td>
+                            <td>Ativo</td>
+                            <td>
+                                <div id="acoes">
+                                    <ion-icon name="add-outline" id="adicionar"></ion-icon>
+                                    <ion-icon name="trash-outline" id="trash"></ion-icon>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Acessorios</td>
+                            <td>Ativo</td>
+                            <td>
+                                <div id="acoes">
+                                    <ion-icon name="add-outline" id="adicionar"></ion-icon>
+                                    <ion-icon name="trash-outline" id="trash"></ion-icon>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mangas</td>
+                            <td>Ativo</td>
+                            <td>
+                                <div id="acoes">
+                                    <ion-icon name="add-outline" id="adicionar"></ion-icon>
+                                    <ion-icon name="trash-outline" id="trash"></ion-icon>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Comidas</td>
+                            <td>Ativo</td>
+                            <td>
+                                <div id="acoes">
+                                    <ion-icon name="add-outline" id="adicionar"></ion-icon>
+                                    <ion-icon name="trash-outline" id="trash"></ion-icon>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+            crossorigin="anonymous"></script>
+        <script
+            src="https:////cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+        <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            let table = new DataTable('#myTable',{
+                responsive: true
+            });
+        </script>
+    </body>
 </html>
