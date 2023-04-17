@@ -1,5 +1,6 @@
 const darkmode = document.getElementById('darkmode');
 const burger = document.getElementById('burger');
+const modal = document.getElementById('modal');
 const a = document.querySelectorAll('a');
 const burgerColor = document.querySelectorAll('#header > div:nth-child(3) > label > span');
 const header = document.querySelector('header');
@@ -23,3 +24,14 @@ window.addEventListener('load', () => {
     darkmode.click();
   }
 });
+
+newCategory.addEventListener('click', ()=>{
+  modal.classList.toggle('hidden')
+})
+
+const fechar = document.getElementById("fechar")
+
+
+fechar.addEventListener('click',()=>{
+  modal.classList.toggle('hidden')
+})
